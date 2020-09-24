@@ -1,0 +1,27 @@
+<div class="game-ui" flexLayout="row wrap" fxLayoutAlign="start center" fxLayoutAlign.lt-md="center center"
+    fxLayoutGap="20px">
+    <div class="game-info" fxFlex="1 1 50%">
+        <h1 class="title">Tic-Tac-Toe Game</h1>
+        <button mat-flat-button (click)="singlePlayerGame()">SinglePlayer</button>
+        <button mat-flat-button (click)="multiPlayerGame()">MultiPlayer</button>
+        <div class="form-group" *ngIf="isChoosedTypeOfGame">
+            <p>
+                <label for="name" class="namePlayer">Player Name X</label>
+                <input type="text" class="form-control" id="firstPlayer" required [(ngModel)]="firstPlayer"
+                    name="firstPlayer">
+            </p>
+            <p *ngIf="!singlePlayer">
+                <label for="name" class="namePlayer">Player Name O</label>
+                <input type="text" class="form-control" id="secondPlayer" required [(ngModel)]="secondPlayer"
+                    name="secondPlayer">
+            </p>
+            <button mat-flat-button (click)="startGame()">Start Game</button>
+
+        </div>
+
+    </div>
+    <div *ngIf="isStartingGame">
+        <!-- Trashegojme tek child 3 variabla -->
+        <app-board [firstPlayer]="firstPlayer" [secondPlayer]="secondPlayer" [singlePlayer]="singlePlayer"></app-board>
+    </div>
+</div>

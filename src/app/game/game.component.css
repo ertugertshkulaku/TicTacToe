@@ -1,0 +1,33 @@
+.game-ui{
+    background: #212121;
+    padding: 5rem;
+    height: 100%;
+    text-align: center;
+}
+.title{
+    color: white;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 600;
+    font-size: 6rem;
+    padding: 3rem 0 0 0 ;
+    @media only screen and (max-width: 45rem){
+        font-size: 5rem;
+        padding: 1.5rem 0;
+        
+    }
+}
+.namePlayer{
+    color: white;
+    font-family: "Permanent Marker", cursive;
+
+}
+button{
+    margin: 2rem;
+    background-color: #108fd8;
+    color:#fff;
+    @media only screen and (max-width: 45rem){
+        font-size: 1.5rem;
+        margin:0 1rem 4rem 1rem;
+        
+    }
+}

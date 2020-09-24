@@ -1,0 +1,19 @@
+.square{
+    width: 100%;
+    height: 100%;
+    font-size: 5rem;
+    color: #212121;
+    border:#212121 solid 3px;
+    border-radius: 0.3rem;
+    transition: all 0.5s;
+}
+.player-x{
+    color:#3366ff;
+
+}
+.player-o{
+    color:#ff3d71;
+}
+/* .square-win{
+    background: linear-gradient(to left, #2dbd64, #38ef7d);
+} */

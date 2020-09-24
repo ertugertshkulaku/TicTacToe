@@ -1,0 +1,36 @@
+<div>
+    <h2 *ngIf="winner === null && !isDraw" class="subtitle">
+        Player <span>{{ player }}</span>'s Turn
+    </h2>
+    <h2 *ngIf="winner !== null && !isDraw" class="subtitle">
+        Player <span>{{ winner }}</span> won the game!
+    </h2>
+    <h2 *ngIf="isDraw" class="subtitle">
+        Game Draw!!!!
+
+    </h2>
+
+</div>
+<div>
+    <button mat-flat-button class="ng-btn" (click)="newGame()">New Game</button>
+    <main>
+        <app-square *ngFor="let square of squares; let i = index" 
+        [square]="square" 
+        [winner]="winner"
+        (click)="makeMove(i)">
+        </app-square>
+        
+    </main>
+</div>
+<div class="scoresheet">
+    <h2>Player <span>{{ firstPlayer }}</span> won :{{ nrWonPlayerX }}</h2><br>  
+    <h2>Player <span>{{ secondPlayer }}</span> won :{{ nrWonPlayerO }}</h2>
+    <div style="color: white;">
+        <p>Game History:</p>
+         <ul>
+        <li *ngFor="let move of movieGameMap" (click)="onHistoryItemClick(move)">
+        {{move }}
+        </li>
+    </ul>
+    </div>
+</div>
